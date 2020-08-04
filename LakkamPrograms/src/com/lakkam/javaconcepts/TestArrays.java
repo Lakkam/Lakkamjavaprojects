@@ -59,9 +59,18 @@ public class TestArrays {
 		int[][] arrayOfIntArrays = new int[2][];
 		int[] firstArray = { 1, 2 };
 		int[] secondArray = { 3, 4 };
-		arrayOfIntArrays[0] = firstArray;
-		arrayOfIntArrays[1] = secondArray;
+		// arrayOfIntArrays[0] = firstArray;
+		// arrayOfIntArrays[1] = secondArray;
 		// Storing Values into 2-d arrays
+
+		for (int twoDRef = 0; twoDRef < arrayOfIntArrays.length; twoDRef++) {
+			if (twoDRef == 0) {
+				arrayOfIntArrays[twoDRef] = firstArray;
+			}
+			if (twoDRef == 1) {
+				arrayOfIntArrays[twoDRef] = secondArray;
+			}
+		}
 		for (int i = 0; i < arrayOfIntArrays.length; i++) {
 			int[] twoDArray = arrayOfIntArrays[i];
 			for (int j = 0; j < twoDArray.length; j++) {
