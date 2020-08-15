@@ -13,7 +13,14 @@ class MyRunnable implements Runnable{
 		if(amount<=balance) {
 			System.out.println("Withdrawing amount is :"+amount+" : With : "+MyThread.currentThread().getName());
 			balance = balance-amount;
+			
 			System.out.println("Balance after successful withdraw : "+balance+" : With : "+MyThread.currentThread().getName());
+			try {
+				MyThread.currentThread().wait();
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 		else {
 			System.out.println("Insufficient Funds : Remaining Balance"+balance+" : With : "+MyThread.currentThread().getName());
