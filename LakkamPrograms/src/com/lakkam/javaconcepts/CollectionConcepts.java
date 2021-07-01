@@ -34,6 +34,8 @@ public class CollectionConcepts implements Comparable<CollectionConcepts> {
 		Collections.sort(myArrayList, new GeneralSort());
 		System.out.println("Sorted by Title with Comparator Interface: " + myArrayList.toString());
 
+		//Lets explore Maps
+		//Lets explore NavigableMap and NavigableSet
 
 	}
 
